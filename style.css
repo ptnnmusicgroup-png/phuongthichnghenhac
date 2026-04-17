@@ -183,3 +183,11 @@ body, html {
     opacity: 1;
     font-weight: 600;
 }
+.hidden { display: none !important; }
+.modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; display: none; align-items: center; justify-content: center; }
+.modal-content { background: #1a1a1a; padding: 30px; border-radius: 15px; width: 300px; text-align: center; border: 1px solid #333; }
+.modal-content input { width: 90%; padding: 10px; margin: 10px 0; background: #000; border: 1px solid #444; color: white; border-radius: 5px; }
+.btn-auth { background: none; border: 1px solid #555; color: white; padding: 5px 15px; margin-bottom: 5px; cursor: pointer; width: 100%; border-radius: 20px; font-size: 12px; }
+.admin-box { border: 1px solid #3897f0 !important; background: rgba(56, 151, 240, 0.05) !important; }
+.admin-box textarea { width: 100%; height: 80px; background: transparent; border: none; color: white; outline: none; resize: none; }
+.site-footer { margin-top: 50px; padding: 30px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; color: #888; font-size: 13px; line-height: 1.8; }
