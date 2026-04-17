@@ -1,0 +1,25 @@
+<div id="auth-page" class="auth-overlay">
+    <div class="auth-container">
+        <div class="auth-logo">Phương Thích Nghe Nhạc</div>
+        
+        <div class="auth-tabs">
+            <button id="tab-login" class="active" onclick="switchAuth('login')">Đăng nhập</button>
+            <button id="tab-register" onclick="switchAuth('register')">Đăng ký</button>
+        </div>
+
+        <div id="form-login" class="auth-form">
+            <input type="text" id="user-in" placeholder="Tên người dùng hoặc Email">
+            <input type="password" id="pass-in" placeholder="Mật khẩu">
+            <button class="btn-primary" onclick="processAuth()">Vào hệ thống</button>
+        </div>
+
+        <div id="form-register" class="auth-form hidden">
+            <input type="text" id="reg-user" placeholder="Tên đăng ký">
+            <input type="email" id="reg-email" placeholder="Email liên hệ">
+            <input type="password" id="reg-pass" placeholder="Mật khẩu mới">
+            <button class="btn-primary" onclick="handleNewUser()">Tạo tài khoản</button>
+        </div>
+        
+        <p class="auth-note">Dữ liệu được lưu trữ an toàn trên hệ thống nội bộ.</p>
+    </div>
+</div>
