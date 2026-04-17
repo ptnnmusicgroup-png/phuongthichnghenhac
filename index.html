@@ -69,6 +69,87 @@
             player.contentWindow.postMessage('{"event":"command","func":"unMute","args":""}', '*');
         }, { once: true });
     </script>
+    <div class="wrapper">
+    <aside class="sidebar">
+        <div class="sidebar-logo">Phương Thích Nghe Nhạc</div>
+        <nav class="sidebar-nav">
+            <a href="#" class="active"><i class="fas fa-plus-circle"></i> Có gì mới</a>
+            <a href="#"><i class="fas fa-star"></i> Bài đăng nổi bật</a>
+            <a href="#"><i class="fab fa-spotify"></i> Spotify</a>
+            <a href="#"><i class="fas fa-music"></i> Official Media</a>
+        </nav>
+    </aside>
+
+    <div class="main-content">
+        <header class="top-header">
+            <nav>
+                <a href="#" class="active">Trang chủ</a>
+                <a href="#">Nội dung</a>
+                <a href="#">Lịch trình</a>
+                <a href="#">Sự kiện</a>
+                <a href="#">Cửa hàng</a>
+            </nav>
+            <div class="header-icons">
+                <i class="fas fa-external-link-alt"></i>
+                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </header>
+
+        <div class="scroll-container">
+            
+            <section class="new-section">
+                <h2 class="section-title">Có gì mới</h2>
+                <div class="banner-wrapper">
+                    <div class="banner-card creative-gradient">
+                        <div class="banner-content">
+                            <h3>Sáng Tạo Nội Dung</h3>
+                            <p>Khám phá không gian âm nhạc mới</p>
+                        </div>
+                    </div>
+                    <div class="banner-card fanme-gradient">
+                        <div class="banner-content">
+                            <h3>Fanme</h3>
+                            <p>Kết nối cộng đồng người nghe</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                </div>
+            </section>
+
+            <section class="post-section">
+                <div class="section-header">
+                    <h2 class="section-title">Bài đăng nổi bật</h2>
+                    <a href="#" class="view-all">Xem tất cả</a>
+                </div>
+
+                <div class="post-card">
+                    <div class="post-user">
+                        <div class="avatar-img">P</div>
+                        <div class="user-info">
+                            <strong>Phương Thích Nghe Nhạc <i class="fas fa-check-circle verified"></i></strong>
+                            <span>02/04/2026</span>
+                        </div>
+                    </div>
+                    <div class="post-body">
+                        <p class="post-text">Baby I gotta say it's you...</p>
+                        <p class="hashtags">#Itsyou #CHOI #CelebEntertainment #DAOLabels #PhươngThíchNgheNhạc</p>
+                        <div class="post-image-container">
+                            <img src="path-to-your-studio-image.jpg" alt="Studio Session" class="post-main-img">
+                        </div>
+                    </div>
+                    <div class="post-footer">
+                        <span><i class="far fa-heart"></i> 25</span>
+                        <span><i class="far fa-comment"></i> 2</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
