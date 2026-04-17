@@ -12,20 +12,20 @@ body {
 
 /* Xử lý video nền */
 .video-container {
-    position: fixed;
-    bottom: 20px;   /* Cách đáy 20px */
-    right: 20px;    /* Cách phải 20px */
-    width: 300px;   /* Chiều rộng thu nhỏ */
-    height: 170px;  /* Chiều cao tương ứng tỉ lệ 16:9 */
-    z-index: 100;   /* Cho nổi lên trên cùng */
-    border-radius: 12px;
+    position: fixed; /* Cố định tại một vị trí */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Quan trọng: Đẩy video ra sau cùng để hiện chữ lên trên */
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
 #bg-player {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Giúp video tràn đều không bị méo */
+    transform: scale(1.3); /* Phóng to nhẹ để che đi viền đen của YouTube */
 }
 
 .overlay {
