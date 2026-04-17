@@ -5,69 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phương Thích Nghe Nhạc - Official</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <div class="video-container">
-    <video autoplay muted loop playsinline id="bg-video">
-        <source src="Videos/bg.mp4" type="video/mp4">
-        Trình duyệt của bạn không hỗ trợ video.
-    </video>
-    <div class="overlay"></div>
-</div>
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="Videos/bg.mp4" type="video/mp4">
+            Trình duyệt của bạn không hỗ trợ video.
+        </video>
+        <div class="overlay"></div>
+    </div>
 
-    <header>
-        <div class="logo">Phương Thích Nghe Nhạc</div>
-        <nav>
-            <ul>
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Nội dung</a></li>
-                <li><a href="#">Lịch trình</a></li>
-                <li><a href="#">Sự kiện</a></li>
-                <li><a href="#">Cửa hàng</a></li>
-            </ul>
-        </nav>
-        <div class="header-icons">
-            <i class="fas fa-external-link-alt"></i>
-            <i class="fas fa-shopping-cart"></i>
-            <i class="fas fa-user"></i>
-        </div>
-    </header>
+    <div class="wrapper">
+        
+        <aside class="sidebar">
+            <div class="sidebar-logo">Phương Thích Nghe Nhạc</div>
+            <nav class="sidebar-nav">
+                <a href="#" class="active"><i class="fas fa-plus-circle"></i> Có gì mới</a>
+                <a href="#"><i class="fas fa-star"></i> Bài đăng nổi bật</a>
+                <a href="#"><i class="fab fa-spotify"></i> Spotify</a>
+                <a href="#"><i class="fas fa-music"></i> Official Media</a>
+            </nav>
+        </aside>
 
-    <main class="hero">
-        <div class="content-box">
-            <h1>PHƯƠNG THÍCH NGHE NHẠC</h1>
-            <p>Website chính thức của Phương Thích Nghe Nhạc</p>
+        <div class="main-content">
             
-            <div class="social-icons">
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-youtube"></i>
-                <i class="fab fa-tiktok"></i>
-                <i class="fab fa-spotify"></i>
-            </div>
+            <header class="top-header">
+                <nav>
+                    <a href="#" class="active">Trang chủ</a>
+                    <a href="#">Nội dung</a>
+                    <a href="#">Lịch trình</a>
+                    <a href="#">Sự kiện</a>
+                    <a href="#">Cửa hàng</a>
+                </nav>
+                <div class="header-icons">
+                    <i class="fas fa-external-link-alt"></i>
+                    <i class="fas fa-shopping-cart"></i>
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </header>
 
-            <button class="btn-join" id="play-button">Tham gia & Nghe nhạc</button>
-        </div>
-    </main>
+            <div class="scroll-container">
+                
+                <section class="new-section">
+                    <h2>Có gì mới</h2>
+                    <div class="banner-wrapper">
+                        <div class="banner-card pink-gradient">
+                            <div class="banner-text">
+                                <span>LIMITED VERSION</span>
+                                <h3>PRE-ORDER "MY DAY" ALBUM</h3>
+                            </div>
+                        </div>
+                        <div class="banner-card blue-gradient">
+                            <div class="banner-text">
+                                <span>LATEST RELEASE</span>
+                                <h3>LIFE IS EVERYTHING - EP</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                    </div>
+                </section>
 
-    <script>
-        const player = document.getElementById('bg-player');
-        const btn = document.getElementById('play-button');
+                <section class="post-section">
+                    <div class="section-header">
+                        <h2>Bài đăng nổi bật</h2>
+                        <a href="#" class="view-all">Xem tất cả</a>
+                    </div>
 
-        // Khi bấm vào nút "Tham gia", nhạc sẽ tự bật tiếng
+                    <div class="post-card">
+                        <div class="post-user">
+                            <div class="avatar">P</div>
+                            <div class="user-info">
+                                <strong>Phương Thích Nghe Nhạc <i class="fas fa-check-circle verified"></i></strong>
+                                <span>17/04/2026</span>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <p>Baby I gotta say it's you...</p>
+                            <p class="hashtags">#Itsyou #MyDay #PhươngThíchNgheNhạc #Artist</p>
+                            <div class="post-media">
+                                <div class="media-placeholder">
+                                    <i class="fas fa-microphone-alt"></i>
+                                    <p>Studio Session - Recording "My Day"</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-footer">
+                            <span><i class="far fa-heart"></i> 25</span>
+                            <span><i class="far fa-comment"></i> 2</span>
+                        </div>
+                    </div>
+                </section>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="btn-join" id="unmute-btn">Tham gia & Nghe nhạc</button>
+                </div>
+
+            </div> </div> </div> <script>
+        const video = document.getElementById('bg-video');
+        const btn = document.getElementById('unmute-btn');
+
+        // Bật âm thanh cho file bg.mp4 khi người dùng tương tác
         btn.addEventListener('click', function() {
-            player.contentWindow.postMessage('{"event":"command","func":"unMute","args":""}', '*');
-            player.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-            alert("Chúc bạn nghe nhạc vui vẻ!");
+            video.muted = false;
+            btn.innerHTML = "Đang phát nhạc bài My Day...";
         });
-
-        // Hoặc chỉ cần click bất kỳ đâu trên trang web là nhạc sẽ bật
-        document.body.addEventListener('click', function() {
-            player.contentWindow.postMessage('{"event":"command","func":"unMute","args":""}', '*');
-        }, { once: true });
     </script>
 
 </body>
