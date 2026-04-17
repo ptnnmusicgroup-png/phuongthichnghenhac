@@ -108,3 +108,78 @@ header nav ul li a {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-15px); }
 }
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; 
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Sidebar giữ nguyên độ rộng */
+.sidebar {
+    width: 260px;
+    flex-shrink: 0; /* Không cho sidebar bị co lại */
+    background: rgba(20, 20, 20, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+
+/* Main content chia thành 2 phần: Header cố định và Content cuộn */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; /* Xếp Header lên trên, Container nội dung bên dưới */
+    height: 100vh;
+    position: relative;
+}
+
+/* Header cố định ở trên cùng của Main Content */
+.top-header {
+    height: 70px; /* Chiều cao cố định cho header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background: rgba(0, 0, 0, 0.4); /* Thêm nền nhẹ để tách biệt với nội dung cuộn */
+    backdrop-filter: blur(5px);
+    z-index: 5;
+}
+
+/* Container chứa nội dung có thể cuộn */
+.scroll-container {
+    flex: 1; /* Tự động chiếm hết phần còn lại của main-content */
+    overflow-y: auto; /* Chỉ cho phép cuộn bên trong vùng này */
+    padding: 30px 40px;
+    scroll-behavior: smooth;
+}
+
+/* Khoảng cách giữa các Section để tránh cảm giác chồng chéo */
+.new-section {
+    margin-bottom: 50px;
+}
+
+.post-section {
+    margin-top: 20px;
+    padding-bottom: 100px; /* Tạo khoảng trống ở cuối trang để không bị sát mép */
+}
+
+/* Tối ưu hiển thị Header để không bị chìm chữ */
+.top-header nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 25px;
+    font-size: 14px;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.top-header nav a.active, .top-header nav a:hover {
+    opacity: 1;
+    font-weight: 600;
+}
